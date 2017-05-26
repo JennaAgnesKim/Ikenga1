@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -12,6 +13,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 
@@ -67,44 +70,46 @@ public class CongratPage extends JFrame {
 		contentPane.add(lblCongratulation);
 		
 		//label for item photo
-		JLabel lblItem = new JLabel("<preview image>");
+		JLabel lblItem = new JLabel("            <preview image>");
 		lblItem.setBounds(24, 140, 234, 262);
+		Border border = BorderFactory.createLineBorder(Color.black);
+		lblItem.setBorder(border);
 		contentPane.add(lblItem);
 		
 		//label for item name
 		JLabel lblItemname = new JLabel("Item");
 		lblItemname.setFont(new Font("Arial", Font.BOLD, 20));
-		lblItemname.setBounds(272, 137, 40, 24);
+		lblItemname.setBounds(272, 149, 40, 24);
 		contentPane.add(lblItemname);
 		
 		//text field for item name
 		tfItem = new JTextField();
-		tfItem.setBounds(326, 128, 288, 46);
+		tfItem.setBounds(326, 140, 288, 46);
 		contentPane.add(tfItem);
 		tfItem.setColumns(10);
 		
 		//label for final price
 		JLabel lblFinalPrice = new JLabel("Final price");
 		lblFinalPrice.setFont(new Font("Arial", Font.BOLD, 20));
-		lblFinalPrice.setBounds(273, 211, 98, 24);
+		lblFinalPrice.setBounds(273, 223, 98, 24);
 		contentPane.add(lblFinalPrice);
 		
 		//text field final price
 		tfFinalPrice = new JTextField();
 		tfFinalPrice.setColumns(10);
-		tfFinalPrice.setBounds(385, 202, 229, 46);
+		tfFinalPrice.setBounds(385, 214, 229, 46);
 		contentPane.add(tfFinalPrice);
 		
 		//label for account number
 		JLabel lblAccountNo = new JLabel("Account No.");
 		lblAccountNo.setFont(new Font("Arial", Font.BOLD, 20));
-		lblAccountNo.setBounds(273, 289, 135, 24);
+		lblAccountNo.setBounds(273, 301, 135, 24);
 		contentPane.add(lblAccountNo);
 		
 		//text field for account number
 		tfAccountNo = new JTextField();
 		tfAccountNo.setColumns(10);
-		tfAccountNo.setBounds(412, 280, 202, 46);
+		tfAccountNo.setBounds(412, 292, 202, 46);
 		contentPane.add(tfAccountNo);
 		
 		//button for close
